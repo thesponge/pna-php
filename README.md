@@ -2,7 +2,7 @@
 
 * composer
 * wkhtmltopdf
-* an X server (for now, until I change the PDF library)
+* a running X server (for now, until I change the PDF library)
 
 
 ## Usage
