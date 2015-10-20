@@ -1,0 +1,7 @@
+{
+    "require": {
+        "fabpot/goutte": "^3.1",
+        "wemersonjanuario/pdf": "^1.0",
+        "symfony/event-dispatcher": "^2.7"
+    }
+}
