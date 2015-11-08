@@ -59,10 +59,10 @@ echo "Done (".($max_online - $max_local)." documents downloaded).\n";
 
 // Generate a file with all the links to downloaded files
 echo "Generating index file... ";
-$fp = fopen('html/'.DOMAIN.'.html', 'w');
-foreach(scandir('./pdf') as $file) {
+$fp = fopen('./html/'.DOMAIN.'.html', 'w');
+foreach(scandir('./pdf/'.DOMAIN) as $file) {
   if(preg_match("/\d+\.pdf/", $file)) {
-    fwrite($fp, "<a href='../pdf/$file'>$file</a><br>\n");
+    fwrite($fp, "<a href='../pdf/".DOMAIN."/$file'>$file</a><br>\n");
   }
 }
 fclose($fp);

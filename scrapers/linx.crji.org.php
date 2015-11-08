@@ -60,7 +60,7 @@ echo "Generating index file... ";
 $fp = fopen('html/'.DOMAIN.'.html', 'w');
 foreach(scandir('./pdf/' . DOMAIN) as $file) {
   if(preg_match("/\d+\.pdf/", $file)) {
-    fwrite($fp, "<a href='../pdf/'.DOMAIN.'/$file'>$file</a><br>\n");
+    fwrite($fp, "<a href='../pdf/".DOMAIN."/$file'>$file</a><br>\n");
   }
 }
 fclose($fp);
