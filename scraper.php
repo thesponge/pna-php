@@ -21,6 +21,14 @@ try {
         if(!include('scrapers/linx.crji.org.php'))
             throw new \Exception("Scraper does not exist!");
         break;
+    case "theblacksea":
+    case "theblacksea.eu":
+        if(!include('scrapers/theblacksea.eu.php'))
+            throw new \Exception("Scraper does not exist!");
+        break;
+    case "upload":
+        system("rsync -avP . ioana@linx:/var/www/html/scraper/");
+        break;
     }
 } catch (Exception $e) {
       echo "Exception: " . $e->getMessage();
